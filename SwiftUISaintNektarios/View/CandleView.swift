@@ -59,8 +59,9 @@ class CandleView: UIView {
     
     private func animateFlames(_ flames: UIView) {
         UIView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse], animations: {
+            flames.frame = CGRect(x: 35, y: -120, width: 30, height: 100)
             flames.transform = CGAffineTransform(translationX: 5.0, y: 0.0)
-            self.layoutIfNeeded()
+            
 
         }) { finished in
             flames.transform = .identity

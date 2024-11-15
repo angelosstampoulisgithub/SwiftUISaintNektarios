@@ -32,6 +32,7 @@ struct Multimedia: View {
                             } label: {
                                 Text(item).foregroundStyle(.white)
                             }.listRowBackground(backgroundGradient)
+                            .foregroundStyle(.white)
                         }
                         if (item.elementsEqual("Απολυτίκιο Αγίου Νεκταρίου")){
                             NavigationLink {
@@ -44,6 +45,7 @@ struct Multimedia: View {
                             } label: {
                                 Text(item).foregroundStyle(.white)
                             }.listRowBackground(backgroundGradient)
+                            .foregroundStyle(.white)
                         }
                         if (item.elementsEqual("Υμνος στην Παναγία")){
                             NavigationLink {
@@ -56,6 +58,7 @@ struct Multimedia: View {
                             } label: {
                                 Text(item).foregroundStyle(.white)
                             }.listRowBackground(backgroundGradient)
+                            .foregroundStyle(.white)
                         }
                         if item == "Κατάλογος Βιβλίων"{
                             NavigationLink {
@@ -68,6 +71,7 @@ struct Multimedia: View {
                             } label: {
                                 Text(item).foregroundStyle(.white)
                             }.listRowBackground(backgroundGradient)
+                            .foregroundStyle(.white)
                         }
                     }.background(Color.clear)
                     .scrollContentBackground(.hidden)

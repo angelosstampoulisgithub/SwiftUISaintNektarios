@@ -40,6 +40,7 @@ struct Miracles: View {
                             } label: {
                                 Text(item.title).foregroundStyle(.white)
                             }.listRowBackground(backgroundGradient)
+                            .foregroundStyle(.white)
                         }.background(Color.clear)
                         .scrollContentBackground(.hidden)
                         .padding(65)
