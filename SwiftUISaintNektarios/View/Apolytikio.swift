@@ -15,26 +15,38 @@ struct Apolytikio: View {
 
     var body: some View {
         VStack{
-            Image(.agios).resizable()
-            Button {
-                isPlaying.toggle()
-                if isPlaying{
-                    player.play()
-                }else{
-                    player.pause()
+            Color.black.overlay {
+                ZStack{
+                    VStack{
+                        Image(.agios).resizable().frame(width:600,height:550,alignment: .top)
+                    }.frame(maxWidth:.infinity,maxHeight: .infinity,alignment: .top)
+                    ZStack{
+                        VStack{
+                            Button {
+                                isPlaying.toggle()
+                                if isPlaying{
+                                    player.play()
+                                }else{
+                                    player.pause()
+                                }
+                            } label: {
+                                if isPlaying{
+                                    Image(.pause)
+                                }else{
+                                    Image(.play)
+                                }
+                            }.background(
+                                Circle()
+                                    .fill(Color.red)
+                                    .frame(width: 55,height:50)
+                            )
+                        }.frame(maxWidth:.infinity,maxHeight:500,alignment: .bottom)
+                    }
                 }
-            } label: {
-                if isPlaying{
-                    Image(.pause)
-                }else{
-                    Image(.play)
-                }
-            }.background(
-                Circle()
-                    .fill(Color.red)
-                    .frame(width: 55,height:50)
-            )
-
+                
+            }
+            
+            
         }.onAppear {
             urlMain = URL(fileURLWithPath:filename)
             player = AVPlayer(url: urlMain)
